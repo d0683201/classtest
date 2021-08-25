@@ -2,130 +2,137 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 
 class main_window(QtWidgets.QWidget):
-    def __init__(self):
-        super().__init__()
-        a = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QLabel"))
-        gb_lay.addWidget(QtWidgets.QLabel("This is a Label"))
-        a.setLayout(gb_lay)
+    
+    
+    def Label(self):
+        layout=QtWidgets.QHBoxLayout()
+        layout.addWidget(QtWidgets.QLabel("This is a QLabel"))
+        layout.addWidget(QtWidgets.QLabel("This is a Label"))
+        return layout
 
-        b = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QLineEdit"))
-        gb_lay.addWidget(QtWidgets.QLineEdit(""))
-        b.setLayout(gb_lay)
+    def LineEdit(self):
+        layout=QtWidgets.QHBoxLayout()
+        layout.addWidget(QtWidgets.QLabel("This is a QLineEdit"))
+        layout.addWidget(QtWidgets.QLineEdit(""))
+        return layout
 
-        c = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QTextEdit"))
-        gb_lay.addWidget(QtWidgets.QTextEdit(""))
-        c.setLayout(gb_lay)
+    def TextEdit(self):
+        layout=QtWidgets.QHBoxLayout()
+        layout.addWidget(QtWidgets.QLabel("This is a QTextEdit"))
+        layout.addWidget(QtWidgets.QTextEdit(""))
+        return layout
 
-        d = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QPushButton"))
-        gb_lay.addWidget(QtWidgets.QPushButton("PushBotton"))
-        d.setLayout(gb_lay)
+    def PushButton(self):
+        layout=QtWidgets.QHBoxLayout()
+        layout.addWidget(QtWidgets.QLabel("This is a QPushButton"))
+        layout.addWidget(QtWidgets.QPushButton("Botton"))
+        return layout
 
-        e = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QRadioButton"))
-        gb_lay.addWidget(QtWidgets.QRadioButton("Item 1"))
-        e.setLayout(gb_lay)
+    def RadioButton(self):
+        layout=QtWidgets.QHBoxLayout()
+        layout.addWidget(QtWidgets.QLabel("This is a QRadioButton"))
+        layout.addWidget(QtWidgets.QRadioButton("Item 1"))
+        return layout
 
-        f = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QCheckBox"))
-        gb_lay.addWidget(QtWidgets.QCheckBox("Check 1"))
-        f.setLayout(gb_lay)
+    def CheckBox(self):
+        layout=QtWidgets.QHBoxLayout()
+        layout.addWidget(QtWidgets.QLabel("This is a QCheckBox"))
+        layout.addWidget(QtWidgets.QCheckBox("Check 1"))
+        return layout
 
-        g = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
+    def ComBox(self):
+        layout=QtWidgets.QHBoxLayout()
         Combox = QtWidgets.QComboBox()
         Combox.addItems(["1","2","3"])
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QComboBox"))
-        gb_lay.addWidget(Combox)
-        g.setLayout(gb_lay)
-
-        h = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
+        layout.addWidget(QtWidgets.QLabel("This is a QComboBox"))
+        layout.addWidget(Combox)
+        return layout
+    
+    def SpinBox(self):
+        layout = QtWidgets.QHBoxLayout()
         Spinbox=QtWidgets.QSpinBox()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QSpinBox"))
-        gb_lay.addWidget(Spinbox)
-        h.setLayout(gb_lay)
-
-        i = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
+        layout.addWidget(QtWidgets.QLabel("This is a QSpinBox"))
+        layout.addWidget(Spinbox)
+        return layout
+    
+    def CalendarWidget(self):    
+        layout=QtWidgets.QHBoxLayout()
         Date=QtWidgets.QCalendarWidget()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QCalendarWidget"))
-        gb_lay.addWidget(Date)
-        i.setLayout(gb_lay)
+        layout.addWidget(QtWidgets.QLabel("This is a QCalendarWidget"))
+        layout.addWidget(Date)
+        return layout
 
-        j = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
+    def Table(self):
+        layout=QtWidgets.QHBoxLayout()
         Table=QtWidgets.QTableWidget(1,10)
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QTableWidget"))
-        gb_lay.addWidget(Table)
-        j.setLayout(gb_lay)
-
-        k = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
+        layout.addWidget(QtWidgets.QLabel("This is a QTableWidget"))
+        layout.addWidget(Table)
+        return layout
+        
+    def Slider(self):    
+        layout=QtWidgets.QHBoxLayout()
         Slider=QtWidgets.QSlider(QtCore.Qt.Horizontal)
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QSlider"))
-        gb_lay.addWidget(Slider)
-        k.setLayout(gb_lay)
+        layout.addWidget(QtWidgets.QLabel("This is a QSlider"))
+        layout.addWidget(Slider)
+        return layout
 
-        l = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
+    def ProgressBar(self):         
+        layout=QtWidgets.QHBoxLayout()
         ProgressBar=QtWidgets.QProgressBar()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QProgressBar"))
-        gb_lay.addWidget(ProgressBar)
-        l.setLayout(gb_lay)
+        layout.addWidget(QtWidgets.QLabel("This is a QProgressBar"))
+        layout.addWidget(ProgressBar)
+        return layout
 
-        m = QtWidgets.QWidget()
-        gb_lay=QtWidgets.QHBoxLayout()
+    def Dial(self):    
+        layout=QtWidgets.QHBoxLayout()
         Dial=QtWidgets.QDial()
-        gb_lay.addWidget(QtWidgets.QLabel("This is a QDial"))
-        gb_lay.addWidget(Dial)
-        m.setLayout(gb_lay)
+        layout.addWidget(QtWidgets.QLabel("This is a QDial"))
+        layout.addWidget(Dial)
+        return layout
 
+    def RadioButtonGroup(self): 
         groupbox=QtWidgets.QGroupBox("This is a QGroupBox example with three QRadioButton")
         gb_lay=QtWidgets.QVBoxLayout()
         gb_lay.addWidget(QtWidgets.QRadioButton("1"))
         gb_lay.addWidget(QtWidgets.QRadioButton("2"))
         gb_lay.addWidget(QtWidgets.QRadioButton("3"))
         groupbox.setLayout(gb_lay)
-        
-        groupbox2=QtWidgets.QGroupBox("This is a QGroupBox example with three QCheckBox")
+        return groupbox
+
+    def CheckBoxGroup(self): 
+        groupboxCheck=QtWidgets.QGroupBox("This is a QGroupBox example with three QCheckBox")
         gb_lay=QtWidgets.QVBoxLayout()
         gb_lay.addWidget(QtWidgets.QCheckBox("1"))
         gb_lay.addWidget(QtWidgets.QCheckBox("2"))
         gb_lay.addWidget(QtWidgets.QCheckBox("3"))
-        groupbox2.setLayout(gb_lay)
-
-
+        groupboxCheck.setLayout(gb_lay)
+        return groupboxCheck
+        
+    def __init__(self):
+        super().__init__()
         vlayout =QtWidgets.QVBoxLayout()
-        vlayout.addWidget(a)
-        vlayout.addWidget(b)
-        vlayout.addWidget(c)
-        vlayout.addWidget(d)
-        vlayout.addWidget(e)
-        vlayout.addWidget(f)
-        vlayout.addWidget(g)
-        vlayout.addWidget(h)
-        vlayout.addWidget(i)
-        vlayout.addWidget(j)
-        vlayout.addWidget(k)
-        vlayout.addWidget(l)
-        vlayout.addWidget(m)
-        vlayout.addWidget(groupbox)
-        vlayout.addWidget(groupbox2)
-
-        self.setGeometry(400,200,150,150)
-        self.resize(700,400)
+        vlayout.addLayout(self.Label())
+        vlayout.addLayout(self.LineEdit())
+        vlayout.addLayout(self.TextEdit())
+        vlayout.addLayout(self.PushButton())
+        vlayout.addLayout(self.RadioButton())
+        vlayout.addLayout(self.CheckBox())
+        vlayout.addLayout(self.ComBox())
+        vlayout.addLayout(self.SpinBox())
+        vlayout.addLayout(self.CalendarWidget())
+        vlayout.addLayout(self.Table())
+        vlayout.addLayout(self.Slider())
+        vlayout.addLayout(self.ProgressBar())
+        vlayout.addLayout(self.Dial())
+        vlayout.addWidget(self.RadioButtonGroup())
+        vlayout.addWidget(self.CheckBoxGroup())
+        self.setGeometry(100,100,100,50)
+        self.resize(415,300)
         self.setLayout(vlayout)
+        
+        
 if __name__ =="__main__":
+
     app=QtWidgets.QApplication([])
     window=main_window()
     window.show()
